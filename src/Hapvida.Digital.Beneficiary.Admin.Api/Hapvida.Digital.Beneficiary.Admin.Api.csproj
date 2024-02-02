@@ -20,4 +20,9 @@
         <ProjectReference Include="..\Hapvida.Digital.Beneficiary.Admin.AzureAppConfig\Hapvida.Digital.Beneficiary.Admin.AzureAppConfig.csproj" />
     </ItemGroup>
 
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="dotnet tool restore" />
+        <Exec Command="dotnet swagger tofile --output Swagger\/Definition\/swagger.json $(OutputPath)/$(AssemblyName).dll 1.0" />
+    </Target>
+
 </Project>

@@ -1,5 +1,9 @@
 ﻿namespace Hapvida.Digital.Beneficiary.Admin.Api;
-using Hapvida.Digital.Beneficiary.Admin.Infra.Data.Queries.v1.FeatureFlags.GetAll;
+using Microsoft.Extensions.Configuration;
+using Hapvida.Digital.Beneficiary.Admin.AzureAppConfig.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Hapvida.Digital.Beneficiary.Admin.Domain.Contracts.v1;
+
 public static class Bootstrapper
 {
     //TODO Enable if need to use redis
@@ -20,7 +24,7 @@ public static class Bootstrapper
     public static IServiceCollection AddApplicationRepository(this IServiceCollection services)
     {
 
-
+        services.AddScoped<IFeatureFlagService, FeatureFlagService>();
         return services;
     }
 
