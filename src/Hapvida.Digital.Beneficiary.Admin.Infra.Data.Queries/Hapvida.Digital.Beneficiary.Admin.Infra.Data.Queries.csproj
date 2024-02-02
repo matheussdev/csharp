@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Hapvida.Digital.Beneficiary.Admin.Domain\Hapvida.Digital.Beneficiary.Admin.Domain.csproj" />
+        <ProjectReference Include="..\Hapvida.Digital.Beneficiary.Admin.AzureAppConfig\Hapvida.Digital.Beneficiary.Admin.AzureAppConfig.csproj" />
+    </ItemGroup>
+
+</Project>
