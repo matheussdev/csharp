@@ -10,18 +10,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/v1": {
-      "get": {
-        "tags": [
-          "FeatureFlag"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/v1/feature-flags": {
       "get": {
         "tags": [

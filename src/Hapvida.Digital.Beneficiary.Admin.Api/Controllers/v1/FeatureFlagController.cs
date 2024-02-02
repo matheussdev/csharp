@@ -7,7 +7,7 @@ using Hapvida.Digital.Beneficiary.Admin.Infra.Data.Queries.v1.FeatureFlags.GetFl
 
 namespace Hapvida.Digital.Beneficiary.Admin.Api.Controllers.v1;
 
-[Route("api/v1")]
+[Route("api/v1/feature-flags")]
 public class FeatureFlagController : BaseController
 
 {
@@ -17,12 +17,6 @@ public class FeatureFlagController : BaseController
     }
 
     [HttpGet]
-    public IActionResult Get()
-    {
-        return Ok("Hello World");
-    }
-
-    [HttpGet("feature-flags")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
